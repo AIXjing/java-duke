@@ -1,0 +1,1 @@
+mvn archetype:generate -DgroupId=com.aixjing -DartifactId=dukew1 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false

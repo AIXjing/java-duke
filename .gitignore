@@ -1,0 +1,5 @@
+venv
+venv_x86
+
+# Data
+**/test
