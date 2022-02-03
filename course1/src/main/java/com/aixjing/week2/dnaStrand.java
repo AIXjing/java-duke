@@ -2,9 +2,7 @@ package com.aixjing.week2;
 
 import edu.duke.StorageResource;
 
-import java.text.DecimalFormat;
-
-public class geneFinder {
+public class dnaStrand {
 
     // create a method find stop codon
     public int findStopCodon (String dna,
@@ -42,7 +40,7 @@ public class geneFinder {
     }
 
     // create a method to print all genes
-    public void findAll(String dna) {
+    public void findAllGenes(String dna) {
         int startIndex = 0;
         int count = 0;
         while (true) {
@@ -77,15 +75,15 @@ public class geneFinder {
     // create a method to store all genes
     public StorageResource getAllGenes(String dna){
         int startIndex = 0;
-        StorageResource genelist = new StorageResource();
+        StorageResource geneList = new StorageResource();
         while (true) {
             String currGene = geneFinder(dna, startIndex);
             if (currGene.isEmpty()) { break; }
-            genelist.add(currGene);
+            geneList.add(currGene);
 //            System.out.println("Find: " + currGene);
             startIndex = dna.indexOf(currGene, startIndex) + currGene.length();
         }
-        return genelist;
+        return geneList;
     }
 
     // a method return the ratio of C and G in dna
@@ -107,9 +105,10 @@ public class geneFinder {
         int count = 0;
         int startIndex = 0;
         while(true){
-            startIndex = dnaLow.indexOf("ctg", startIndex + 1);
-            if (startIndex == -1){ break; }
-            if(startIndex % 3 == 0){ count += 1; }
+            int Index = dnaLow.indexOf("ctg", startIndex);
+            if (Index == -1){ break; }
+            if(Index % 3 == 0){ count += 1; }
+            startIndex = Index + 1;
         }
         return count;
     }
