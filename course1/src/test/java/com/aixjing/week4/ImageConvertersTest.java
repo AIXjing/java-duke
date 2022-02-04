@@ -7,17 +7,21 @@ import org.junit.Test;
 public class ImageConvertersTest {
     // ImageConverters imageConverters = new ImageConverters(new ImageResource());
 
+//    ImageResource inImage = new ImageResource("src/main/resources/week4/babydata/images/astrachan.jpg");
 
     @Test
     public void makeGaryTest(){
-        ImageConverters imageConverters = new ImageConverters();
-        ImageResource inImage = new ImageResource("src/main/resources/week4/babydata/images/astrachan.jpg");
-        ImageResource gray = imageConverters.makeGary(inImage);
-        String fileName = inImage.getFileName();
-        String newFileName = "gray-" + fileName;
-        gray.setFileName(newFileName);
-        gray.draw();
-        gray.save();
+        ImageConverters imageConverters = ImageConverters.openFromPop();
+        imageConverters.makeGary();
     }
 
+    @Test
+    public void grayBatchTest(){
+        ImageConverters.convertBatchToGray();
+    }
+
+    @Test
+    public void inverseBatchTest(){
+        ImageConverters.inverseBatch();
+    }
 }
