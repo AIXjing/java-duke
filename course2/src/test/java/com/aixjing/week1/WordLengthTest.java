@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import org.junit.Test;
 
 public class WordLengthTest {
-    FileResource fr = new FileResource("week1/PracticeBreakingCaesarData/lotsOfWords.txt");
+    FileResource fr = new FileResource("week1/CommonWordsData/manywords.txt");
     WordLength wordLength = new WordLength(fr);
 
     @Test
