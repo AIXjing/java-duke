@@ -43,7 +43,7 @@ public class VigenereBreakerTest {
   public void breakForLanguageTest () {
     HashSet<String> dict = vBreaker.readDictionary(new FileResource("week4/dictionaries/English"));
     FileResource fr = new FileResource("week4/messages/secretmessage2.txt");
-    String decryption = vBreaker.breakForLanguage(fr.asString(),dict);
+    String decryption = vBreaker.breakForLanguage(fr.asString(), dict);
     System.out.println(decryption);
   }
 
@@ -58,4 +58,24 @@ public class VigenereBreakerTest {
     int count = vBreaker.countWords(decrypted, dict);
     System.out.println(count);
   }
+
+  @Test
+  public void mostCommonCharInTest () {
+    HashSet<String> dict = vBreaker.readDictionary(new FileResource("week4/dictionaries/English"));
+    char commonCharInEnglish = vBreaker.mostCommonCharIn(dict);
+    System.out.println("The most common letter in English is " + commonCharInEnglish);
+  }
+
+  @Test
+  public void readLanguagesTest() {
+    vBreaker.readLanguages();
+  }
+
+  @Test
+  public void breakForAllTest() {
+    FileResource fr = new FileResource("week4/messages/secretmessage4.txt");
+    String message = fr.asString();
+    System.out.println(vBreaker.breakForAll(message));
+  }
+
 }

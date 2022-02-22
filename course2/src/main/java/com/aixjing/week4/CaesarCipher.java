@@ -1,7 +1,7 @@
 package com.aixjing.week4;
 
 public class CaesarCipher {
-  private String alphabet;
+  public static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   private String shiftedAlphabet;
   private int theKey;
 
