@@ -22,7 +22,7 @@ public class QuakeSortWithTwoArrayLists {
     }
     
     public ArrayList<QuakeEntry> sortByMagnitude(ArrayList<QuakeEntry> in) {
-        ArrayList<QuakeEntry> out = new ArrayList<QuakeEntry>();
+        ArrayList<QuakeEntry> out = new ArrayList<>();
         while(!in.isEmpty()) {
             QuakeEntry minElement = getSmallestMagnitude(in);
             in.remove(minElement);
