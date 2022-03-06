@@ -1,4 +1,4 @@
-package com.aixjing.week2;
+package com.aixjing.week2.SelectionSort;
 /**
  * Write a description of class QuakeSortInPlace here.
  *
@@ -60,7 +60,7 @@ public class QuakeSortInPlace {
       pass++;
 //      System.out.println(pass + " pass: ");
 //      quakeEntriesCopy.forEach(System.out::println);
-      if (pass == 50) break;
+      if (pass == 70) break;
       if (isSortedFromLargest(quakeEntriesCopy)) break;
     }
     System.out.println(pass + " passes");

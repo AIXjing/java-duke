@@ -1,11 +1,13 @@
 package com.aixjing.week2;
 
+import com.aixjing.week2.SelectionSort.QuakeEntry;
+import com.aixjing.week2.SelectionSort.QuakeSortInPlace;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
 public class QuakeSortInPlaceTest {
-    String source = "/Users/jingai/workspace/JAVA-Duke/course4/src/main/resources/week2/earthQuakeDataDec6sample1.atom";
+    String source = "/Users/jingai/workspace/JAVA-Duke/course4/src/main/resources/week2/earthQuakeDataWeekDec6sample2.atom";
     QuakeSortInPlace quakeSortInPlace = new QuakeSortInPlace(source);
 
     @Test

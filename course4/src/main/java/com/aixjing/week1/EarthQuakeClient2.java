@@ -56,7 +56,7 @@ public class EarthQuakeClient2 {
 
     public ArrayList<QuakeEntry> quakesWithMinMagFilter(double mag) {
         Filter minMagFilter = new MinMagFilter(mag);
-        return quakeEntries.stream()
+        return this.quakeEntries.stream()
                 .filter(minMagFilter::satisfies)
                 .collect(Collectors.toCollection(ArrayList::new));
     }
@@ -110,5 +110,4 @@ public class EarthQuakeClient2 {
                 qe.getInfo());
         }
     }
-
 }

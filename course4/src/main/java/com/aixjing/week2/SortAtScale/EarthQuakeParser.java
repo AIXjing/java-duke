@@ -1,4 +1,4 @@
-package com.aixjing.week2;
+package com.aixjing.week2.SortAtScale;
 
 import java.io.File;
 import java.io.IOException;

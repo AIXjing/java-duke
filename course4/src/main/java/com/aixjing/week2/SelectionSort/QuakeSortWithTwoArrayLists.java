@@ -1,7 +1,6 @@
-package com.aixjing.week2;
+package com.aixjing.week2.SelectionSort;
 
 import java.util.*;
-import edu.duke.*;
 
 public class QuakeSortWithTwoArrayLists {
     // This is the code from the Video of Selection Sort with Two ArrayLists
