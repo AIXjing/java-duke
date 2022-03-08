@@ -1,4 +1,4 @@
-package com.aixjing.week3;
+package com.aixjing.week3.course;
 
 /**
  * Write a description of interface IMarkovModel here.
@@ -8,10 +8,9 @@ package com.aixjing.week3;
  */
 
 public interface IMarkovModel {
-    public void setTraining(String text);
-    
-    public void setRandom(int seed);
-    
-    public String getRandomText(int numChars);
 
+    public void setTraining(String text);
+    public String getRandomText(int numChars);
+    public void setRandom(int seed);
+    public int getKeySize();
 }
