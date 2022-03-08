@@ -9,11 +9,13 @@ package com.aixjing.week3.course;
 
 import edu.duke.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 
 public class MarkovRunnerWithInterface {
-	private String text;
-	private int textSize;
+	private final String text;
+	private final int textSize;
 	private int seed;
 
 
@@ -32,6 +34,12 @@ public class MarkovRunnerWithInterface {
 		this.textSize = textSize;
 	}
 
+	public MarkovRunnerWithInterface(String st, int textSize, int seed) {
+		st = st.replace('\n', ' ');
+		this.text = st.trim();
+		this.seed = seed;
+		this.textSize = textSize;
+	}
 
     public void runModel(IMarkovModel markov) {
 		markov.setTraining(text);
@@ -57,8 +65,19 @@ public class MarkovRunnerWithInterface {
         
 //        MarkovFour mFour = new MarkovFour();
 //        runModel(mFour, st, size);
-
     }
+
+	public HashMap<String, ArrayList<Character>> testHashMap(String text, int seed) {
+		MarkovModel markovModel = new MarkovModel(seed);
+		markovModel.setTraining(text);
+		return markovModel.generateMap(5);
+	}
+
+	public HashMap<String, ArrayList<Character>> testHashMapModel(int keyLen) {
+		MarkovModel markovModel = new MarkovModel(seed);
+		markovModel.setTraining(text);
+		return markovModel.generateMap(keyLen);
+	}
 
 	private void printOut(String s){
 		String[] words = s.split("\\s+");

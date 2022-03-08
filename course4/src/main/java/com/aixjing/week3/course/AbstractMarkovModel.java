@@ -42,4 +42,23 @@ public abstract class AbstractMarkovModel implements IMarkovModel {
         return followers;
     }
 
+    protected HashMap<String, ArrayList<Character>> generateMap(int keyLen) {
+        HashMap<String, ArrayList<Character>> keyMap = new HashMap<>();
+        int textLen = this.myText.length();
+        for (int i = 0; i < textLen - keyLen; i++) {
+            String key = this.myText.substring(i, i + keyLen);
+            if (!keyMap.containsKey(key)) {
+                Character ch = this.myText.charAt(i + keyLen);
+                ArrayList<Character> keyFollowers = new ArrayList<>();
+                keyFollowers.add(ch);
+                keyMap.put(key, keyFollowers);
+            } else {
+                Character ch = this.myText.charAt(i + keyLen);
+                keyMap.get(key).add(ch);
+            }
+        }
+        keyMap.put(this.myText.substring(textLen - keyLen, textLen), new ArrayList<Character>() );
+        return keyMap;
+    }
+
 }

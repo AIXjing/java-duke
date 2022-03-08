@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class MarkovOne extends AbstractMarkovModel {
-  private int keySize = 1;
+  private final int keySize = 1;
 
   public MarkovOne() {
     myRandom = new Random();
