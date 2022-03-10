@@ -1,7 +1,6 @@
 package com.aixjing.week3.MarkovWord;
 
 import edu.duke.FileResource;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 
@@ -11,7 +10,7 @@ public class MarkovWordOneTest {
     FileResource fr = new FileResource("src/main/resources/week3/confucius.txt");
     MarkovWordOne markovWordOneFr = new MarkovWordOne(fr, 175);
 
-    MarkovRunner markovRunner = new MarkovRunner(fr, 175, 200);
+    MarkovRunner markovRunner = new MarkovRunner(fr, 139, 200);
 
     @Test
     public void getFollowsTest () {
@@ -19,7 +18,7 @@ public class MarkovWordOneTest {
 //    System.out.println(markovWordOne.getFollows("is").toString());
 //        System.out.println(markovWordOne.generateMap().toString());
 
-        markovRunner.runMarkov();
+        markovRunner.runMarkovOne();
     }
 
 }

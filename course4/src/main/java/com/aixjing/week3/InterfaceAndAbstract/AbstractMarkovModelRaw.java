@@ -1,4 +1,4 @@
-package com.aixjing.week3.course;
+package com.aixjing.week3.InterfaceAndAbstract;
 /**
  * Abstract class AbstractMarkovModel - write a description of the class here
  *

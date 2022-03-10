@@ -1,4 +1,4 @@
-package com.aixjing.week3.course;
+package com.aixjing.week3.InterfaceAndAbstract;
 /**
  * Write a description of class MarkovRunner here.
  * 

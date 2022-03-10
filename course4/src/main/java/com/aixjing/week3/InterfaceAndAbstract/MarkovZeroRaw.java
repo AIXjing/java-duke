@@ -1,4 +1,4 @@
-package com.aixjing.week3.course;
+package com.aixjing.week3.InterfaceAndAbstract;
 /**
  * Write a description of class MarkovZero here.
  * 
@@ -8,10 +8,11 @@ package com.aixjing.week3.course;
 
 import java.util.Random;
 
-public class MarkovZero extends AbstractMarkovModel{
-	private int keySize = 0;
+public class MarkovZeroRaw {
+    private String myText;
+	private Random myRandom;
 	
-	public MarkovZero() {
+	public MarkovZeroRaw() {
 		myRandom = new Random();
 	}
 	
@@ -22,9 +23,7 @@ public class MarkovZero extends AbstractMarkovModel{
 	public void setTraining(String s){
 		myText = s.trim();
 	}
-
-	public int getKeySize() {return keySize;}
-
+	
 	public String getRandomText(int numChars){
 		if (myText == null){
 			return "";
@@ -34,6 +33,7 @@ public class MarkovZero extends AbstractMarkovModel{
 			int index = myRandom.nextInt(myText.length());
 			sb.append(myText.charAt(index));
 		}
+		
 		return sb.toString();
 	}
 }

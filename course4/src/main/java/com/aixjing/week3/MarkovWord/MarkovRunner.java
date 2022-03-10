@@ -50,13 +50,21 @@ public class MarkovRunner {
         }
     }
 
-    public void runMarkov() {
+    public void runMarkovOne() {
 //        String st = fr.asString();
 //        st = st.replace('\n', ' ');
         MarkovWordOne markovWord = new MarkovWordOne(fr, seed);
 //        runModel(markovWord, st,200);
-        runModel(markovWord,200);
-    } 
+        runModel(markovWord,size);
+    }
+
+    public void runMarkovTwo() {
+//        String st = fr.asString();
+//        st = st.replace('\n', ' ');
+        MarkovWordTwo markovWord = new MarkovWordTwo(fr, seed);
+//        runModel(markovWord, st,200);
+        runModel(markovWord,size);
+    }
 
     private void printOut(String s){
         String[] words = s.split("\\s+");

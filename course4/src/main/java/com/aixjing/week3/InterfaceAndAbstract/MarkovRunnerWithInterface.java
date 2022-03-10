@@ -1,4 +1,4 @@
-package com.aixjing.week3.course;
+package com.aixjing.week3.InterfaceAndAbstract;
 
 /**
  * Write a description of class MarkovRunner here.
@@ -11,7 +11,6 @@ import edu.duke.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Random;
 
 public class MarkovRunnerWithInterface {
 	private final String text;
