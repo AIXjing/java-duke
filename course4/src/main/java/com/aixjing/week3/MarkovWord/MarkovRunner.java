@@ -42,7 +42,7 @@ public class MarkovRunner {
     }
 
     // not included in the course
-    public void runModel(IMarkovModel markov, int size){
+    private void runModel(IMarkovModel markov, int size){
         System.out.println("running with " + markov);
         for(int k=0; k < 3; k++){
             String st = markov.getRandomText(size);

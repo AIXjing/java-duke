@@ -1,4 +1,4 @@
-package com.aixjing.week3;
+package com.aixjing.week3.MarkovN;
 /**
  * A modified MarkovZero class
  * 
@@ -33,6 +33,7 @@ public class MarkovZero {
 	public String getMyText() {
 		return this.myText;
 	}
+	public void setMyRandom(int seed) {myRandom = new Random(seed);}
 
 	// generates and returns random text that is numChars long
 	public String getRandomText(int numChars){

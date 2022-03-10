@@ -9,14 +9,14 @@ import java.util.HashMap;
 
 public class MarkovRunnerWithInterfaceTest {
     FileResource fr = new FileResource("src/main/resources/week3/confucius.txt");
-    MarkovRunnerWithInterface mRunInterface = new MarkovRunnerWithInterface(fr, 200, 42);
+    MarkovRunnerWithInterface mRunInterface = new MarkovRunnerWithInterface(fr, 200, 365);
 
     String text = "yes-this-is-a-thin-pretty-pink-thistle";
 
     @Test
     public void runMarkovTest() {
 //        mRunInterface.runMarkov();
-        HashMap<String, ArrayList<Character>> keyMap = mRunInterface.testHashMap(text, 42);
+        HashMap<String, ArrayList<Character>> keyMap = mRunInterface.testHashMap(text, 365);
     System.out.println(keyMap.size());
         for (String key: keyMap.keySet()) {
             System.out.println(key + ": " + keyMap.get(key));

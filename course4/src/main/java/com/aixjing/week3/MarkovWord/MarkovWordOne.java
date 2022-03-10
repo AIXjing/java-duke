@@ -20,7 +20,7 @@ public class MarkovWordOne implements IMarkovModel {
 
 	// this constructor is not included in the course material
     public MarkovWordOne(String text, int seed) {
-		myText = text.split("\\s++");
+		myText = text.split("\\s+");
 		myRandom = new Random(seed);
     }
 
@@ -28,7 +28,7 @@ public class MarkovWordOne implements IMarkovModel {
 	public MarkovWordOne(FileResource fr, int seed) {
 		String st = fr.asString();
 		st = st.replace('\n', ' ');
-		myText = st.split("\\s++");
+		myText = st.split("\\s+");
 		myRandom = new Random(seed);
 	}
     
@@ -59,14 +59,13 @@ public class MarkovWordOne implements IMarkovModel {
 			sb.append(" ");
 			key = next;
 		}
-		
 		return sb.toString().trim();
 	}
 	
-	private ArrayList<String> getFollows(String key) {
+	public ArrayList<String> getFollows(String key) {
 	    ArrayList<String> follows = new ArrayList<String>();
 		int pos = 0;
-		int start = 0;
+		int start;
     	while (pos < myText.length) {
 			start = indexOf(myText, key, pos);
 			if(start == -1) break;
@@ -74,6 +73,7 @@ public class MarkovWordOne implements IMarkovModel {
 			pos = start + 1;
 			follows.add(myText[pos]);
 		}
+		System.out.println("The number of follows: " + follows.size());
 		return follows;
     }
 

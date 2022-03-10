@@ -1,4 +1,4 @@
-package com.aixjing.week3;
+package com.aixjing.week3.MarkovN;
 /**
  * A created MarkovOne Class
  *
@@ -54,7 +54,7 @@ public class MarkovOne {
     sb.append(key);
     for (int k = keyLen - 1; k < numChars - keyLen; k++) {
       ArrayList<Character> follows = keyMap.get(key);
-      if (follows.equals(null)) {
+      if (follows == null) {
         break;
       }
       int indexOfNext = myRandom.nextInt(follows.size());
@@ -117,6 +117,7 @@ public class MarkovOne {
         followers.add(this.myText.substring(i + keySize, i + keySize + 1));
       }
     }
+    System.out.println("Follows size is " + followers.size());
     return followers;
   }
 }
